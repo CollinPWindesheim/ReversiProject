@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj": {}
+    "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj": {
+    "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj",
+        "projectUniqueName": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj",
         "projectName": "ReversiMvcApp",
-        "projectPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj",
+        "projectPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj",
         "packagesPath": "C:\\Users\\colli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\obj\\",
+        "outputPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\colli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -81,12 +81,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[5.0.14, 5.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -96,11 +90,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }

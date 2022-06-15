@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\colli\\Desktop\\test\\Reversi\\NUnitTestProject\\NUnitTestProject.csproj": {}
+    "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\NUnitTestProject\\NUnitTestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\colli\\Desktop\\test\\Reversi\\NUnitTestProject\\NUnitTestProject.csproj": {
+    "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\NUnitTestProject\\NUnitTestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colli\\Desktop\\test\\Reversi\\NUnitTestProject\\NUnitTestProject.csproj",
+        "projectUniqueName": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\NUnitTestProject\\NUnitTestProject.csproj",
         "projectName": "NUnitTestProject",
-        "projectPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\NUnitTestProject\\NUnitTestProject.csproj",
+        "projectPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\NUnitTestProject\\NUnitTestProject.csproj",
         "packagesPath": "C:\\Users\\colli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\NUnitTestProject\\obj\\",
+        "outputPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\NUnitTestProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\colli\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp5.0"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj": {
-                "projectPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj"
+              "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj": {
+                "projectPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj"
               }
             }
           }
@@ -74,21 +74,16 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
         }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
-        }
       }
     },
-    "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj": {
+    "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj",
+        "projectUniqueName": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj",
         "projectName": "ReversiMvcApp",
-        "projectPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\ReversiMvcApp.csproj",
+        "projectPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\ReversiMvcApp.csproj",
         "packagesPath": "C:\\Users\\colli\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\colli\\Desktop\\test\\Reversi\\Reversi\\obj\\",
+        "outputPath": "C:\\Users\\colli\\Desktop\\test\\ReversiDone\\Reversi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\colli\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -158,12 +153,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[5.0.14, 5.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -173,11 +162,6 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }
