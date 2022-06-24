@@ -11,11 +11,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Reversi.Data;
-using Reversi.Hubs;
-using Reversi.Models;
+using ReversiMvcApp.Data;
+using ReversiMvcApp.Hubs;
+using ReversiMvcApp.Models;
 
-namespace Reversi
+namespace ReversiMvcApp
 {
     public class Startup
     {
@@ -31,9 +31,9 @@ namespace Reversi
         {
             
 
-            services.AddDbContext<ReversiContext>(options => options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("ReversiContextConnection")));
-            //services.AddDefaultIdentity<Speler>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ReversiContext>();
-            services.AddIdentity<Speler, IdentityRole>().AddEntityFrameworkStores<ReversiContext>().AddDefaultUI().AddDefaultTokenProviders();
+            services.AddDbContext<ReversiMvcAppContext>(options => options.UseLazyLoadingProxies().UseSqlServer(Configuration.GetConnectionString("ReversiContextConnection")));
+            //services.AddDefaultIdentity<Speler>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ReversiMvcAppContext>();
+            services.AddIdentity<Speler, IdentityRole>().AddEntityFrameworkStores<ReversiMvcAppContext>().AddDefaultUI().AddDefaultTokenProviders();
             services.AddMvc();
             services.AddControllersWithViews();
             services.AddSignalR();
@@ -66,7 +66,7 @@ namespace Reversi
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
-                endpoints.MapHub<ReversiHub>("/reversiHub");
+                endpoints.MapHub<ReversiMvcAppHub>("/ReversiHub");
             });
         }
     }

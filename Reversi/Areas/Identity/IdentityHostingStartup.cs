@@ -5,11 +5,11 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Reversi.Data;
-using Reversi.Models;
+using ReversiMvcApp.Data;
+using ReversiMvcApp.Models;
 
-[assembly: HostingStartup(typeof(Reversi.Areas.Identity.IdentityHostingStartup))]
-namespace Reversi.Areas.Identity
+[assembly: HostingStartup(typeof(ReversiMvcApp.Areas.Identity.IdentityHostingStartup))]
+namespace ReversiMvcApp.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

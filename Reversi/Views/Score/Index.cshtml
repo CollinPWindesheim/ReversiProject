@@ -1,0 +1,28 @@
+﻿@using ReversiMvcApp.Models
+@model List<ScoreViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Score bord</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Naam</th>
+            <th>Gewonnen</th>
+            <th>Verloren</th>
+            <th>Gelijk gepspeeld</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+        <tr>
+            <td>@user.Speler</td>
+            <td>@user.AantalGewonnen</td>
+            <td>@user.AantalVerloren</td>
+            <td>@user.AantalGelijk</td>
+        </tr>
+        }
+    </tbody>
+</table>

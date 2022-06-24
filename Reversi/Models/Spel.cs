@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Reversi.Models
+namespace ReversiMvcApp.Models
 {
     public enum SpelState { Waiting, Ongoing, Finished, ForfeitZwart, ForfeitWit }
 

@@ -6,20 +6,20 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
-using Reversi.Data;
-using Reversi.Hubs;
-using Reversi.Models;
+using ReversiMvcApp.Data;
+using ReversiMvcApp.Hubs;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Controllers
+namespace ReversiMvcApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class SpelController : ControllerBase
     {
-        private readonly ReversiContext _context;
-        private readonly IHubContext<ReversiHub> _hubContext;
+        private readonly ReversiMvcAppContext _context;
+        private readonly IHubContext<ReversiMvcAppHub> _hubContext;
 
-        public SpelController(ReversiContext context, IHubContext<ReversiHub> hubContext)
+        public SpelController(ReversiMvcAppContext context, IHubContext<ReversiMvcAppHub> hubContext)
         {
             _context = context;
             _hubContext = hubContext;
@@ -127,6 +127,20 @@ namespace Reversi.Controllers
         public async Task<IActionResult> PutSpel()
         {
             SpelSpeler spelSpeler = await _context.SpelSpelers.FirstOrDefaultAsync(ss => ss.Spel.SpelState == SpelState.Ongoing && ss.Speler.UserName == HttpContext.User.Identity.Name);
+            //Scores spelerscores1 = await _context.Scores.FirstOrDefaultAsync(ss => ss.Speler == HttpContext.User.Identity.Name);
+            //Scores spelerscores2 = await _context.Scores.FirstOrDefaultAsync(ss => ss.Speler != HttpContext.User.Identity.Name);
+
+            //if (spelerscores1 == null)
+            //{
+            //    Scores score = new Scores();
+            //    score.Speler = HttpContext.User.Identity.Name;
+            //    score.AantalGewonnen = 0;
+            //    score.AantalVerloren = 0;
+            //    score.AantalGelijk = 0;
+
+            //    await _context.Scores.AddAsync(score);
+            //}
+
             if (spelSpeler == null || spelSpeler.Kleur != spelSpeler.Spel.AandeBeurt)
             {
                 return Unauthorized();
@@ -144,6 +158,12 @@ namespace Reversi.Controllers
                 await _context.SaveChangesAsync();
                 if (afgelopen)
                 {
+                    //Scores score = await _context.Scores.FirstOrDefaultAsync(ss => ss.Speler == HttpContext.User.Identity.Name);
+                    
+                    //score.AantalGelijk += spelSpeler.Speler.Draw;
+                    //score.AantalGewonnen += spelSpeler.Speler.Won;
+                    //score.AantalVerloren += spelSpeler.Speler.Lost;
+                    //await _context.SaveChangesAsync();
                     await _hubContext.Clients.Group(spelSpeler.SpelId).SendAsync("Finish", new SpelResult(spelSpeler)
                     {
                         Color = Kleur.Geen

@@ -682,3 +682,4 @@ C:\Users\colli\Desktop\test\ReversiDone\Reversi\obj\Debug\net5.0\ReversiMvcApp.d
 C:\Users\colli\Desktop\test\ReversiDone\Reversi\obj\Debug\net5.0\ref\ReversiMvcApp.dll
 C:\Users\colli\Desktop\test\ReversiDone\Reversi\obj\Debug\net5.0\ReversiMvcApp.pdb
 C:\Users\colli\Desktop\test\ReversiDone\Reversi\obj\Debug\net5.0\ReversiMvcApp.genruntimeconfig.cache
+C:\Users\colli\Desktop\test\ReversiDone\Reversi\obj\Debug\net5.0\Razor\Views\Score\Index.cshtml.g.cs

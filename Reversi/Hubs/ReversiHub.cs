@@ -1,22 +1,22 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SignalR;
-using Reversi.Data;
-using Reversi.Models;
+using ReversiMvcApp.Data;
+using ReversiMvcApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace Reversi.Hubs
+namespace ReversiMvcApp.Hubs
 {
     [Authorize]
-    public class ReversiHub : Hub
+    public class ReversiMvcAppHub : Hub
     {
-        private readonly ReversiContext _context;
+        private readonly ReversiMvcAppContext _context;
 
-        public ReversiHub(ReversiContext context)
+        public ReversiMvcAppHub(ReversiMvcAppContext context)
         {
             _context = context;
         }

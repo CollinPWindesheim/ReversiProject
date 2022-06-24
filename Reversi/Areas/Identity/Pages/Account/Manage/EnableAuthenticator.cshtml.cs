@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Areas.Identity.Pages.Account.Manage
+namespace ReversiMvcApp.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
@@ -149,7 +149,7 @@ namespace Reversi.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("Reversi"),
+                _urlEncoder.Encode("ReversiMvcApp"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

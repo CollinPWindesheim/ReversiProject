@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Data
+namespace ReversiMvcApp.Data
 {
-    public class ReversiContext : IdentityDbContext<Speler>
+    public class ReversiMvcAppContext : IdentityDbContext<Speler>
     {
-        public ReversiContext(DbContextOptions<ReversiContext> options)
+        public ReversiMvcAppContext(DbContextOptions<ReversiMvcAppContext> options)
             : base(options)
         {
         }

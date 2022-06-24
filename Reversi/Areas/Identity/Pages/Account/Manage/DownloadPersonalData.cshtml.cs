@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Areas.Identity.Pages.Account.Manage
+namespace ReversiMvcApp.Areas.Identity.Pages.Account.Manage
 {
     public class DownloadPersonalDataModel : PageModel
     {

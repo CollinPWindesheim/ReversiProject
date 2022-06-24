@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 using Microsoft.AspNetCore.Identity;
 
-namespace Reversi.Areas.Identity.Pages.Account
+namespace ReversiMvcApp.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterConfirmationModel : PageModel

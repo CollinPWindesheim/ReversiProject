@@ -6,21 +6,21 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
-using Reversi.Data;
-using Reversi.Hubs;
-using Reversi.Models;
+using ReversiMvcApp.Data;
+using ReversiMvcApp.Hubs;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Controllers
+namespace ReversiMvcApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class MessageController : ControllerBase
     {
 
-        private readonly ReversiContext _context;
-        private readonly IHubContext<ReversiHub> _hubContext;
+        private readonly ReversiMvcAppContext _context;
+        private readonly IHubContext<ReversiMvcAppHub> _hubContext;
 
-        public MessageController(ReversiContext context, IHubContext<ReversiHub> hubContext)
+        public MessageController(ReversiMvcAppContext context, IHubContext<ReversiMvcAppHub> hubContext)
         {
             _context = context;
             _hubContext = hubContext;

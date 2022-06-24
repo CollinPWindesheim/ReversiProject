@@ -4,12 +4,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Reversi.Data;
+using ReversiMvcApp.Data;
 
-namespace Reversi.Migrations
+namespace ReversiMvcApp.Migrations
 {
-    [DbContext(typeof(ReversiContext))]
-    partial class ReversiContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ReversiMvcAppContext))]
+    partial class ReversiMvcAppContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -150,7 +150,7 @@ namespace Reversi.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Coordinate", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Coordinate", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -177,7 +177,7 @@ namespace Reversi.Migrations
                     b.ToTable("Coordinates");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Message", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Message", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -201,7 +201,7 @@ namespace Reversi.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Spel", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Spel", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -230,7 +230,7 @@ namespace Reversi.Migrations
                     b.ToTable("Spellen");
                 });
 
-            modelBuilder.Entity("Reversi.Models.SpelSpeler", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.SpelSpeler", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -253,7 +253,7 @@ namespace Reversi.Migrations
                     b.ToTable("SpelSpelers");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Speler", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Speler", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -324,6 +324,25 @@ namespace Reversi.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("ReversiMvcApp.Models.Scores", b =>
+                {
+                    b.Property<string>("Speler")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AantalGelijk")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AantalGewonnen")
+                        .HasColumnType("int");
+
+                    b.Property<int>("AantalVerloren")
+                        .HasColumnType("int");
+
+                    b.HasKey("Speler");
+
+                    b.ToTable("Scores");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -335,7 +354,7 @@ namespace Reversi.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Reversi.Models.Speler", null)
+                    b.HasOne("ReversiMvcApp.Models.Speler", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -344,7 +363,7 @@ namespace Reversi.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Reversi.Models.Speler", null)
+                    b.HasOne("ReversiMvcApp.Models.Speler", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -359,7 +378,7 @@ namespace Reversi.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Reversi.Models.Speler", null)
+                    b.HasOne("ReversiMvcApp.Models.Speler", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -368,38 +387,38 @@ namespace Reversi.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Reversi.Models.Speler", null)
+                    b.HasOne("ReversiMvcApp.Models.Speler", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Reversi.Models.Coordinate", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Coordinate", b =>
                 {
-                    b.HasOne("Reversi.Models.Spel", "Spel")
+                    b.HasOne("ReversiMvcApp.Models.Spel", "Spel")
                         .WithMany("Coordinates")
                         .HasForeignKey("SpelId");
 
                     b.Navigation("Spel");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Message", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Message", b =>
                 {
-                    b.HasOne("Reversi.Models.SpelSpeler", "SpelSpeler")
+                    b.HasOne("ReversiMvcApp.Models.SpelSpeler", "SpelSpeler")
                         .WithMany("Messages")
                         .HasForeignKey("SpelSpelerId");
 
                     b.Navigation("SpelSpeler");
                 });
 
-            modelBuilder.Entity("Reversi.Models.SpelSpeler", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.SpelSpeler", b =>
                 {
-                    b.HasOne("Reversi.Models.Spel", "Spel")
+                    b.HasOne("ReversiMvcApp.Models.Spel", "Spel")
                         .WithMany("SpelSpelers")
                         .HasForeignKey("SpelId");
 
-                    b.HasOne("Reversi.Models.Speler", "Speler")
+                    b.HasOne("ReversiMvcApp.Models.Speler", "Speler")
                         .WithMany("SpelSpelers")
                         .HasForeignKey("SpelerId");
 
@@ -408,19 +427,19 @@ namespace Reversi.Migrations
                     b.Navigation("Speler");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Spel", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Spel", b =>
                 {
                     b.Navigation("Coordinates");
 
                     b.Navigation("SpelSpelers");
                 });
 
-            modelBuilder.Entity("Reversi.Models.SpelSpeler", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.SpelSpeler", b =>
                 {
                     b.Navigation("Messages");
                 });
 
-            modelBuilder.Entity("Reversi.Models.Speler", b =>
+            modelBuilder.Entity("ReversiMvcApp.Models.Speler", b =>
                 {
                     b.Navigation("SpelSpelers");
                 });

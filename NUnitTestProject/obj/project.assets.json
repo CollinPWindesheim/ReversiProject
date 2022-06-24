@@ -2907,6 +2907,7 @@
           "Microsoft.EntityFrameworkCore.Proxies": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.17",
+          "Microsoft.Extensions.Identity.Core": "5.0.17",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
         },
         "compile": {

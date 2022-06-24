@@ -1,6 +1,6 @@
 using System;
 
-namespace Reversi.Models
+namespace ReversiMvcApp.Models
 {
     public class ErrorViewModel
     {

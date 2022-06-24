@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Controllers
+namespace ReversiMvcApp.Controllers
 {
     public class HomeController : Controller
     {

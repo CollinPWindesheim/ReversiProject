@@ -6,17 +6,17 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Reversi.Data;
-using Reversi.Models;
+using ReversiMvcApp.Data;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Controllers
+namespace ReversiMvcApp.Controllers
 {
     [Authorize]
     public class SpellenController : Controller
     {
-        private readonly ReversiContext _context;
+        private readonly ReversiMvcAppContext _context;
 
-        public SpellenController(ReversiContext context)
+        public SpellenController(ReversiMvcAppContext context)
         {
             _context = context;
         }
@@ -144,10 +144,22 @@ namespace Reversi.Controllers
 
         // POST: Spellen/Delete/5
         [Authorize(Roles = "Beheerder, Mediator")]
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+            List<SpelSpeler> spelers = await _context.SpelSpelers.Where(x => x.SpelId == id).ToListAsync();
+            foreach (var item in spelers)
+            {
+                _context.SpelSpelers.Remove(item);
+            }
+
+            List<Coordinate> coordinates = await _context.Coordinates.Where(x => x.SpelId == id).ToListAsync();
+            foreach (var item in coordinates)
+            {
+                _context.Coordinates.Remove(item);
+            }
+
             var spel = await _context.Spellen.FindAsync(id);
             _context.Spellen.Remove(spel);
             await _context.SaveChangesAsync();

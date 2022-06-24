@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Areas.Identity.Pages.Account.Manage
+namespace ReversiMvcApp.Areas.Identity.Pages.Account.Manage
 {
     public class SetPasswordModel : PageModel
     {

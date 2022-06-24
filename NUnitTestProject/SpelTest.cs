@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

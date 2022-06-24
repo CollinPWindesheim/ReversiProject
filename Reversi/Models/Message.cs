@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Reversi.Models
+namespace ReversiMvcApp.Models
 {
     public enum MessageType { Message, Connect, Disconnect }
     public class Message

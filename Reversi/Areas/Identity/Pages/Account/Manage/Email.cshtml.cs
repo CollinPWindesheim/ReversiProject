@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
-using Reversi.Models;
+using ReversiMvcApp.Models;
 
-namespace Reversi.Areas.Identity.Pages.Account.Manage
+namespace ReversiMvcApp.Areas.Identity.Pages.Account.Manage
 {
     public partial class EmailModel : PageModel
     {

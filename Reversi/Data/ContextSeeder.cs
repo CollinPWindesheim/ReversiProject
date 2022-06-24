@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Reversi.Models;
 using ReversiMvcApp.Models;
 using System;
 using System.Linq;

@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Reversi.Models;
 using ReversiMvcApp.Models;
 using System.Collections.Generic;
 using System.Linq;

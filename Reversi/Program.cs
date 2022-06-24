@@ -8,11 +8,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Reversi.Data;
-using Reversi.Models;
 using ReversiMvcApp.Data;
+using ReversiMvcApp.Models;
 
-namespace Reversi
+namespace ReversiMvcApp
 {
     public class Program
     {
@@ -26,7 +25,7 @@ namespace Reversi
                 var loggerFactory = services.GetRequiredService<ILoggerFactory>();
                 try
                 {
-                    var context = services.GetRequiredService<ReversiContext>();
+                    var context = services.GetRequiredService<ReversiMvcAppContext>();
                     var userManager = services.GetRequiredService<UserManager<Speler>>();
                     var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
                     await ContextSeeder.SeedRolesAsync(userManager, roleManager);

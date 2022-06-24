@@ -22,8 +22,8 @@ const Game = (function(url){
    const unread = document.getElementById('unread');
    const status = document.getElementById('status');
    const loading = document.getElementById('loading');
-   const chatbox = document.getElementById('chat-box');
-   const chatsend = document.getElementById('chat-send');
+   //const chatbox = document.getElementById('chat-box');
+   //const chatsend = document.getElementById('chat-send');
 
    const error = err => new Alert({
       message: err.toString(),
@@ -40,7 +40,7 @@ const Game = (function(url){
       parent: 'main'
    });
 
-   const connection = new signalR.HubConnectionBuilder().withUrl("/reversiHub").build();
+   const connection = new signalR.HubConnectionBuilder().withUrl("/ReversiMvcAppHub").build();
    connection.start().catch(function (err) {
       error(err.toString()).show();
    });
